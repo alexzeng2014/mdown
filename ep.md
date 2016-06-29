@@ -10,3 +10,4 @@ Sublimetext的优点就是比Atom快很多。
 下载Atom插件：git-control；就是命令行的GUI版本,,有些类似sourcetree,但是不如它强大,日用满足
 
 但是操作起来还是蛮方便的。
+有时，会出现莫名的错误！
