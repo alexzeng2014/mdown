@@ -93,7 +93,32 @@ Pipe     | $1
 >- 记得加空格哦。
 ~~~
 
+### 如何本地安装Atom插件
 
+插件安装：Settings-install，查找插件名称进行安装。但是手动安装插件速度更快，不知是不是因为墙的关系。
+运行CMD
+~~~
+C:\Users\alexzeng>cd .atom
+
+C:\Users\alexzeng\.atom>cd packages
+
+C:\Users\alexzeng\.atom\packages>git clone https://github.com/mark-hahn/markdown-scroll-sync.git
+Cloning into 'markdown-scroll-sync'...
+remote: Counting objects: 177, done.
+Receiving objects:  86% (153, reused 0 (delta 0), pack-reused 177
+Receiving objects: 100% (177/177), 38.02 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (79/79), done.
+Checking connectivity... done.
+
+C:\Users\alexzeng\.atom\packages>cd markdown-scroll-sync
+
+C:\Users\alexzeng\.atom\packages\markdown-scroll-sync>npm install
+sub-atom@1.1.0 node_modules\sub-atom
+└── jquery@2.2.4
+
+~~~
+
+手动安装成功后，需要重启Atom才能成功！
 ### 上传到git服务器
 
 下载Atom插件：git-control；就是命令行的GUI版本,有些类似sourcetree,但是不如它强大,日用满足
@@ -101,15 +126,9 @@ Pipe     | $1
 但是操作起来还是蛮方便的，**ALT+CTRL+O** 打开git-control,点击commit，然后再push
 有时，会出现莫名的错误！特别是使用中文文件名。
 
-### 手动修改快捷键
 
-修改编辑器的快捷键：如果快捷发生冲突，可以在Settings-keybindings中查看是哪个插件导致错误，使用以下的语句在keymap.cson（File-keymap），使用unset!对造成冲突的快捷键停止使用。
 
-~~~
- 'atom-text-editor:not([mini])':
-   'ctrl-shift-m': 'unset!'
-   ~~~
-
+### emmet
 下载emmet插件,快速html代码。
 
  ** HTML **
@@ -205,30 +224,14 @@ html:4s：用于HTML4严格文档类型 —
   </div>
   ~~~
 
-### 如何本地安装Atom插件
+### 手动修改快捷键
 
-插件安装：Settings-install，查找插件名称进行安装。但是手动安装插件速度更快，不知是不是因为墙的关系。
-运行CMD
-~~~
-C:\Users\alexzeng>cd .atom
+  修改编辑器的快捷键：如果快捷发生冲突，可以在Settings-keybindings中查看是哪个插件导致错误，使用以下的语句在keymap.cson（File-keymap），使用unset!对造成冲突的快捷键停止使用。
 
-C:\Users\alexzeng\.atom>cd packages
+  ~~~
+   'atom-text-editor:not([mini])':
+     'ctrl-shift-m': 'unset!'
+     ~~~
 
-C:\Users\alexzeng\.atom\packages>git clone https://github.com/mark-hahn/markdown-scroll-sync.git
-Cloning into 'markdown-scroll-sync'...
-remote: Counting objects: 177, done.
-Receiving objects:  86% (153, reused 0 (delta 0), pack-reused 177
-Receiving objects: 100% (177/177), 38.02 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (79/79), done.
-Checking connectivity... done.
 
-C:\Users\alexzeng\.atom\packages>cd markdown-scroll-sync
-
-C:\Users\alexzeng\.atom\packages\markdown-scroll-sync>npm install
-sub-atom@1.1.0 node_modules\sub-atom
-└── jquery@2.2.4
-
-~~~
-
-手动安装成功后，需要重启Atom才能成功！
-### 看
+###  代码提示，自动提醒插件
