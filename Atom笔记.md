@@ -38,6 +38,8 @@ keymaps 文件中：
 'atom-workspace atom-text-editor:not(.mini)':
   'ctrl-d': 'toggle-markdown-task:toggle'
 ~~~
+
+
 ### Markdown简明语法
 mdown在Atom应用起来简直爽快，利用快捷键 **Ctrl+Shift+M** 可以同步浏览，而且界面巨爽！！！
 
