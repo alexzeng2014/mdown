@@ -9,11 +9,16 @@
 - 将代码显示到浏览器里面去
 - 代码提示，自动提醒插件
 - 任务列表：Toggle Markdown Task
-- 颜色 补全路径插件
+- 补全路径插件 Autocomplete Paths
 - Atom 备份插件
-- 
+- 代码格式化atom-beautify
 
-
+### 代码格式化atom-beautify
+~~~
+'atom-text-editor:not([mini])':
+  'ctrl-shift-m': 'unset!',
+ 'ctrl-alt-b': 'atom-beautify:beautify-editor'
+~~~
 ## Atom 备份插件
 
 sync-settings可以同步Atom的设置文件,自定义快捷键,用户风格,初始化脚本及代码片段,还支持已安装的插件同步。绝对神器！！
@@ -29,6 +34,9 @@ sync-settings可以同步Atom的设置文件,自定义快捷键,用户风格,初
   sync-settings:view-backup – 这条是当你执行备份后到线上查询你的备份的,也就是到你的gist code里面
   sync-settings:check-backup – 这条是查询最后一次是否正常
   ```
+
+
+## 补全路径插件 Autocomplete Paths
 
 ## Toggle Markdown Task
 
@@ -136,7 +144,7 @@ Pipe     | $1
 
 >- 块引用里使用列表，需要和上面的内容隔开一个空行
 >- 记得加空格哦。
-```
+~~~
 
 ## 如何本地安装Atom插件
 
