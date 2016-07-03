@@ -12,6 +12,19 @@
 - 补全路径插件 Autocomplete Paths
 - Atom 备份插件
 - 代码格式化atom-beautify
+- 选择高亮插件 Highlight Selected
+- Todo 查询
+- linter代码检查
+
+### TODO
+在TODO加入关键词的，未完成功能的功能方便以后
+
+### linter代码检查
+一口气装上了两个linter-jshint和linter-scss-lint，
+linter-spell-html发生错误。
+
+###  simplified-chinese-menu中文菜单
+
 
 ### 代码格式化atom-beautify
 ~~~
@@ -185,6 +198,13 @@ apm config set strict-ssl false
 apm config set registry https://registry.npm.taobao.org
 如果需要删除该镜像设置，使用：apm config delete registry
 ```
+
+或者，直接用Settings
+
+~~~
+编辑 ~/.atom/.apmrc，添加 registry = https://registry.npm.taobao.org 即可
+
+~~~
 
 ## 上传到git服务器
 
