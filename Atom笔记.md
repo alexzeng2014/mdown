@@ -1,34 +1,40 @@
-学会Atom的基础
-====
-### 目录
-+ Markdown简明语法
-+ 学会将Atom中的项目发送到github
-+ 如何修改快捷键
-+ 如何本地化安装插件
-+ 将代码显示到浏览器里面去
-+ 代码提示，自动提醒插件
-+ 任务列表：Toggle Markdown Task
-+ 颜色 补全路径插件
-+ Atom 备份插件
+# 学会Atom的基础
 
-###Atom 备份插件
- sync-settings可以同步Atom的设置文件,自定义快捷键,用户风格,初始化脚本及代码片段,还支持已安装的插件同步。绝对神器！！
- 1. 进入设置中心找到该插件,进去setting
- 2. 打开自己的github创建一个personal access token – 然后复制生成的token序列,粘贴到插件的setting里面的(42ba555f6f2008e8063707c8d394105eef9c8140)
- 3. 再打开github的gist服务,创建一个gist–复制生成gistID（3f89fe827603e169e9e58ca73fe94902）,也粘贴到二步设置里面
- 4. 在文档编辑页面,按下全局命令搜索面板(Ctrl+shift+p)
-搜索sync- ,会有可选项
-~~~
-sync-settings:backup – 这条命令是备份当前的配置
-sync-settings:restore – 这条命令是回复配置,是直接覆盖的;
-sync-settings:view-backup – 这条是当你执行备份后到线上查询你的备份的,也就是到你的gist code里面
-sync-settings:check-backup – 这条是查询最后一次是否正常
-~~~
+## 目录
 
-###Toggle Markdown Task
+- Markdown简明语法
+- 学会将Atom中的项目发送到github
+- 如何修改快捷键
+- 如何本地化安装插件
+- 将代码显示到浏览器里面去
+- 代码提示，自动提醒插件
+- 任务列表：Toggle Markdown Task
+- 颜色 补全路径插件
+- Atom 备份插件
+- 
+
+
+## Atom 备份插件
+
+sync-settings可以同步Atom的设置文件,自定义快捷键,用户风格,初始化脚本及代码片段,还支持已安装的插件同步。绝对神器！！
+
+1. 进入设置中心找到该插件,进去setting
+2. 打开自己的github创建一个personal access token – 然后复制生成的token序列,粘贴到插件的setting里面的(42ba555f6f2008e8063707c8d394105eef9c8140)
+3. 再打开github的gist服务,创建一个gist–复制生成gistID（3f89fe827603e169e9e58ca73fe94902）,也粘贴到二步设置里面
+4. 在文档编辑页面,按下全局命令搜索面板(Ctrl+shift+p) 搜索sync- ,会有可选项
+
+  ```
+  sync-settings:backup – 这条命令是备份当前的配置
+  sync-settings:restore – 这条命令是回复配置,是直接覆盖的;
+  sync-settings:view-backup – 这条是当你执行备份后到线上查询你的备份的,也就是到你的gist code里面
+  sync-settings:check-backup – 这条是查询最后一次是否正常
+  ```
+
+## Toggle Markdown Task
 
 安装Toggle Markdown Task，建立一个基于Markdown文档的Todo列表。
-~~~
+
+```
 - [ ] 任务类别：
 
 Clrd+d 打勾
@@ -37,12 +43,13 @@ keymaps 文件中：
 
 'atom-workspace atom-text-editor:not(.mini)':
   'ctrl-d': 'toggle-markdown-task:toggle'
-~~~
-### Markdown简明语法
+```
+
+## Markdown简明语法
+
 mdown在Atom应用起来简直爽快，利用快捷键 **Ctrl+Shift+M** 可以同步浏览，而且界面巨爽！！！
 
-
-~~~
+```
 标题：
 #h1级标题
 ##h2级标题
@@ -102,11 +109,11 @@ Pipe     | $1
 
 有序列表：使用 数字 加一个英文句点
 
-1. 有序列表
-2. 有序列表
-3. 有序列表
-4. 有序列表
-5. 有序列表
+1\. 有序列表
+2\. 有序列表
+3\. 有序列表
+4\. 有序列表
+5\. 有序列表
 
 换行缩进形成代码区块
 
@@ -121,13 +128,13 @@ Pipe     | $1
 
 >- 块引用里使用列表，需要和上面的内容隔开一个空行
 >- 记得加空格哦。
-~~~
+```
 
-### 如何本地安装Atom插件
+## 如何本地安装Atom插件
 
-插件安装：Settings-install，查找插件名称进行安装。但是手动安装插件速度更快，不知是不是因为墙的关系。
-运行CMD
-~~~
+插件安装：Settings-install，查找插件名称进行安装。但是手动安装插件速度更快，不知是不是因为墙的关系。 运行CMD
+
+```
 C:\Users\alexzeng>cd .atom
 
 C:\Users\alexzeng\.atom>cd packages
@@ -145,32 +152,45 @@ C:\Users\alexzeng\.atom\packages>cd markdown-scroll-sync
 C:\Users\alexzeng\.atom\packages\markdown-scroll-sync>npm install
 sub-atom@1.1.0 node_modules\sub-atom
 └── jquery@2.2.4
-
-~~~
+```
 
 手动安装成功后，需要重启Atom才能成功！
-### 上传到git服务器
+
+也可以改镜像直接安装：
+
+> apm install atom-beautify
+
+如果这个安装速度太慢，还可以如下： 在terminal下运行如下命令，避开防火墙设置:
+
+```
+apm config set strict-ssl false
+修改registry到淘宝npm镜像
+
+apm config set registry https://registry.npm.taobao.org
+如果需要删除该镜像设置，使用：apm config delete registry
+```
+
+## 上传到git服务器
 
 下载Atom插件：git-control；就是命令行的GUI版本,有些类似sourcetree,但是不如它强大,日用满足
 
-但是操作起来还是蛮方便的，**ALT+CTRL+O** 打开git-control,点击commit，然后再push
-有时，会出现莫名的错误！特别是使用中文文件名。
+但是操作起来还是蛮方便的，**ALT+CTRL+O** 打开git-control,点击commit，然后再push 有时，会出现莫名的错误！特别是使用中文文件名。
 
+## emmet
 
-
-### emmet
 下载emmet插件,快速html代码。
 
- ** HTML **
-~~~
+**HTML**
+
+```
 html:5 或!：用于HTML5文档类型 —
 html:xt：用于XHTML过渡文档类型 —
 html:4s：用于HTML4严格文档类型 —
-~~~
+```
 
-** id#|类.|属性[]|内容{},若是不带父元素,则默认为隐性生成(就近原则) **
+**id#|类.|属性[]|内容{},若是不带父元素,则默认为隐性生成(就近原则)**
 
-  ~~~
+```
   <!-简写格式我就放在注释里面啦啦!!-->
   <!--#test.test-->
   <div id="test" class="test">
@@ -182,10 +202,11 @@ html:4s：用于HTML4严格文档类型 —
 
   <!-- a[href="http://www.baidu.com"]{文本内容--我是百度} -->
   <a href="http://www.baidu.com">文本内容--我是百度</a>
-  ~~~
+```
 
-  **后代> | 兄弟+ | 上级^**
-  ~~~
+**后代> | 兄弟+ | 上级^**
+
+```
   <!-- div>ul>li 后代 -->
   <div>
     <ul>
@@ -209,11 +230,11 @@ html:4s：用于HTML4严格文档类型 —
       </ul>
     </p>
   </div>
-  ~~~
+```
 
-  **分组()/乘法*/自增$/自减$@-/起序$@数字**
+**分组()/乘法*/自增$/自减$@-/起序$@数字**
 
-  ~~~
+```
   <!-- div>ul>(li>a)*2 -->
   <div>
     <ul>
@@ -252,17 +273,17 @@ html:4s：用于HTML4严格文档类型 —
       <li><a href="">文本6</a></li>
     </ul>
   </div>
-  ~~~
+```
 
-### 手动修改快捷键
+## 手动修改快捷键
 
-  修改编辑器的快捷键：如果快捷发生冲突，可以在Settings-keybindings中查看是哪个插件导致错误，使用以下的语句在keymap.cson（File-keymap），使用unset!对造成冲突的快捷键停止使用。
+修改编辑器的快捷键：如果快捷发生冲突，可以在Settings-keybindings中查看是哪个插件导致错误，使用以下的语句在keymap.cson（File-keymap），使用unset!对造成冲突的快捷键停止使用。
 
-  ~~~
+```
    'atom-text-editor:not([mini])':
      'ctrl-shift-m': 'unset!'
-     ~~~
+```
 
+## 代码提示，自动提醒插件
 
-###  代码提示，自动提醒插件
 js,jquery的自动提醒插件。
