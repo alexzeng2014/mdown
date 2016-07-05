@@ -1,5 +1,7 @@
 # 学会Atom的基础
 
+![学会Atom基础](http://7xvup9.com1.z0.glb.clouddn.com/imgbgcp1.png)
+
 ## 目录
 
 - Markdown简明语法
@@ -66,6 +68,13 @@ keymaps 文件中：
   'ctrl-d': 'toggle-markdown-task:toggle'
 <<<<<<< HEAD
 ```
+
+## md-writer让写MD文档更方便
+这插件用起来相当方便，可是记住快捷键以及设置快捷键也并不是很容易的事。
+
+<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>p</kbd>输入wr:然后查找也许是个不错的选择。
+
+但无论如何，下面的简明语法一定得要学会。
 
 ## Markdown简明语法
 =======
